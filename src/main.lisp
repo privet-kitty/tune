@@ -65,6 +65,7 @@
                          (subseq res 1 (- (length res) 1))
                          res))))
 
+(declaim (ftype (function * (values list &optional)) get-tuned-obj))
 (defun get-tuned-obj ()
   (loop for symbol being each hash-key of *parameters*
         using (hash-value value)
